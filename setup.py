@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="downloader",  # Название вашего модуля
-    version="0.1.0",  # Версия
+    version="0.1.1",  # Версия
     packages=find_packages(),  # Автоматически находит все пакеты
     install_requires=[  # Зависимости, если они есть
         # "numpy",
