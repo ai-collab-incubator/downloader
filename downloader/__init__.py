@@ -47,5 +47,3 @@ class FileDownloader:
 
   
     return filename, original_filename_decoded
-
-gi
