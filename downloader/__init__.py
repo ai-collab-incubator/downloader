@@ -1,6 +1,7 @@
 import requests
 from tqdm import tqdm
 import urllib.parse
+from .helper  import resolve_direct_yandex_url
 
 
 class FileDownloader:
@@ -47,3 +48,27 @@ class FileDownloader:
 
   
     return filename, original_filename_decoded
+
+
+
+class YandexDownloader(FileDownloader):
+    
+    def __init__(self):
+        """
+        Конструктор класса для загрузки с Yandex Disk.
+        token: API-ключ для работы с Yandex Disk (если нужно).
+        """
+        super().__init__()
+       
+
+  
+    
+    def download(self, url, new_file_name=None):
+        """
+        Скачивание файла с Яндекс Диска с применением специфической логики.
+        """
+        # Преобразование URL для Яндекс Диска (если нужно)
+        resolved_url = resolve_direct_yandex_url(url)
+        
+        # Вызов родительского метода для скачивания
+        return super().download(resolved_url, new_file_name)
