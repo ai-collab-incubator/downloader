@@ -2,11 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name="downloader",  # Название вашего модуля
-    version="0.1.2",  # Версия
+    version="0.1.3",  # Версия
     packages=find_packages(),  # Автоматически находит все пакеты
     install_requires=[  # Зависимости, если они есть
-        # "numpy",
-        # "requests"
+       "wldhx.yadisk-direct",
+       "tqdm",
+       "requests"
     ],
     url="https://github.com/ai-collab-incubator/downloader",  # URL вашего репозитория
     author="pauchai",
